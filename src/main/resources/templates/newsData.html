@@ -1,0 +1,5 @@
+<div th:each="elem : ${news}">
+    <h1 th:text="${elem.getTitle()}" />
+    <span style="font-size:8px" th:text="${elem.getCreateDate()}" />
+    <div th:text="${elem.getText()}" />
+</div>

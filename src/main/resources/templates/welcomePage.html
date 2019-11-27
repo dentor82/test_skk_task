@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:unless="${messageHellow}">
+    <a href="login">Представьтесь пожалуйста</a>
+</div>
+<div th:if="${messageHellow}">
+    <a href="logout">Выйти</a>
+</div>
+<H1 th:if="${messageHellow}" th:utext="${messageHellow}"></H1>
+<H1 th:unless="${messageHellow}">Приветствуем Вас, достопочтенный Гость!</H1>
+
+<div th:if="${messageHellow}">
+    <a href="news">Новости</a>
+</div>
+</body>
+</html>

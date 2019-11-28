@@ -4,10 +4,7 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageHeaders;
 import ru.htccs.den.springboottest.models.News;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class NewsMessage implements Message<List<News>> {
 
@@ -16,6 +13,7 @@ public class NewsMessage implements Message<List<News>> {
 
     public NewsMessage(Map<String, Object> inMap) {
         this.header = new MessageHeaders(inMap);
+        this.list = new ArrayList<News>();
     }
 
     @Override

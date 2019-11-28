@@ -26,7 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http    // Без аутентификации
-                .authorizeRequests().antMatchers("/").permitAll()
+                .authorizeRequests().antMatchers("/", "/api/saveNews").permitAll()
                 // Все только после аутентификации
                 .anyRequest().authenticated()
                 .and()

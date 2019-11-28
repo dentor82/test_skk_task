@@ -14,7 +14,6 @@ import java.util.Date;
 @Table(name = "list_news")
 public class News {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private long Id;
 
     @Column(name = "create_date")

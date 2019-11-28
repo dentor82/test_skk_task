@@ -4,10 +4,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.Message;
+import org.springframework.stereotype.Service;
 import ru.htccs.den.springboottest.messages.MessageListener;
 import ru.htccs.den.springboottest.models.News;
 import ru.htccs.den.springboottest.repository.INewsRepository;
 
+@Service
 public class NewsMessageListener implements MessageListener<NewsMessage> {
     private Logger log = LogManager.getLogger(this.getClass());
     @Autowired

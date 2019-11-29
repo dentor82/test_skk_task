@@ -25,10 +25,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http    // Без аутентификации
-                .authorizeRequests().antMatchers("/", "/api/saveNews").permitAll()
+        http.csrf().disable()
+                // Без аутентификации
+                .authorizeRequests().antMatchers("/").permitAll()
+                .and().authorizeRequests().antMatchers("/api/saveNews").permitAll()
                 // Все только после аутентификации
-                .anyRequest().authenticated()
+                .anyRequest()
+                .authenticated()
                 .and()
                 .formLogin().defaultSuccessUrl("/welcome")
                 .permitAll()

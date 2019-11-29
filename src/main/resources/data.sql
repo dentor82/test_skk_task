@@ -1,4 +1,4 @@
-INSERT INTO login_users (id, user_name, user_password) VALUES (1, '1', '{noop}123');
+INSERT INTO login_users (id, user_name, user_password) VALUES (1, 'user', '{noop}123');
 
 INSERT INTO list_news (id, create_date, title_news, text_news) VALUES
 (1, PARSEDATETIME('22.11.2019', 'dd.MM.yyyy'), 'Ужас на улицах', 'Выпал снег'),
